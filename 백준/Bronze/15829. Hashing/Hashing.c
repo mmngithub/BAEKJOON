@@ -1,16 +1,17 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include<math.h>
-#include<stdio.h>
-int main() {
-	int L;
-	char arr[50];
-	int total = 0;
-	scanf("%d", &L);
-	for (int i = 0; i < L; i++) {
-		scanf(" %c", &arr[i]);
+#include <stdio.h>
+#define M 1234567891
+
+int main()
+{
+	int len, i;
+	long long hash_value = 0, R = 1;
+	char str[50];
+	scanf("%d %s", &len, str);
+	for (i = 0; i < len; i++)
+	{
+		hash_value = (hash_value + (str[i] - 'a' + 1) * R) % M;
+		R = (R * 31) % M;
 	}
-	for (int i = 0; i < L; i++) {
-		total+=((int)(arr[i])-'a'+1) * (pow(31, i));
-	}
-	printf("%d", total);
+	printf("%lld\n", hash_value);
 }
