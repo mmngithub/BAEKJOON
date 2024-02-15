@@ -2,10 +2,10 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
+int num[500000];
 int main() {
 	int N;
 	scanf("%d", &N);
-	int* num = new int[N];
 	for (int i = 0; i < N; i++) {
 		scanf("%d", &num[i]);
 	}
