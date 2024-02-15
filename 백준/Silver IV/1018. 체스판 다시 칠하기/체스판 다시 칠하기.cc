@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -48,21 +47,16 @@ int BW_cnt(int x, int y) {
 	}
 	return cnt;
 }
-
-
-
-
-
 int main() {
-	pair <int, int> p;
-	cin >> p.first >> p.second;
+	int N, M;
+	cin >> N >> M;
 	int result=64;
 	int tmp;
-	for (int i = 0; i < p.first; i++) {
+	for (int i = 0; i < N; i++) {
 		cin >> w[i];
 	}
-	for (int i = 0; i+8 <= p.first; i++) {
-		for (int j = 0; j+8 <= p.second; j++) {
+	for (int i = 0; i+8 <= N; i++) {
+		for (int j = 0; j+8 <= M; j++) {
 			tmp = min(WB_cnt(i, j), BW_cnt(i, j));
 			if (tmp < result) {
 				result = tmp;
