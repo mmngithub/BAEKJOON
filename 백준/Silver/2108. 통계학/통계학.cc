@@ -2,10 +2,8 @@
 #include<algorithm>
 #include<vector>
 #include<cmath>
-
 int arr[8001] = { 0 };
 using namespace std;
-
 int main() {
 	int N;
 	cin >> N;
@@ -16,23 +14,13 @@ int main() {
 		sum += v[i];
 		arr[v[i]+4000] +=1;
 	}
-	/*
-	if (sum > 0) {
-		cout << int(sum / N) << "\n";
-	}
-	else {
-		if (int(sum / N) == int(sum / N - 0.5)) {
-			cout << int(sum / N)<<"\n";
-		}
-		else {
-			cout << int(sum / N - 1)<<"\n";
-		}
-	}*/
+
 	sum = round(sum / N);
 	if (sum == -0) {
 		sum = 0;
 	}
 	cout << sum << "\n";
+	
 	sort(v.begin(), v.end());
 	int result;
 	int max = *max_element(arr, arr + 8001);
