@@ -2,7 +2,7 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
-long long v[10001];
+int v[10000];
 int main() {
 	int k, n;
 	cin >> k >> n;
@@ -20,7 +20,7 @@ int main() {
 		}
 		if (count >= n) {
 			start = mid + 1;			
-				result = mid;			
+			result = mid;			
 		}
 		else {
 			end = mid -1;
